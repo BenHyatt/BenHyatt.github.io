@@ -7,13 +7,38 @@
 <body>
 <h3>Welcome to the GOLD Party ELT Unified Online Network Login System, AKA GOLDPELTUONLS!</h3>
 
-  <form method="POST" action="//www.jamesunderwood.net/goldapi/login.php">
+  <form id="eltlogin" method="POST" action="//www.jamesunderwood.net/goldapi/login.php">
        <input type="username" placeholder="username" name="user"> 
        <input type="password" placeholder="password" name="pass"> 
         <input type="submit" value="submit">
   </form>
   
-  
+  <div id="response"></div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 
-</body>
+  
+  <script>
+    $("#eltlogin").submit(function(e) {
+
+    e.preventDefault(); // avoid to execute the actual submit of the form.
+
+    var form = $(this);
+    var url = form.attr('action');
+
+    $.ajax({
+           type: "POST",
+           url: url,
+           data: form.serialize(), // serializes the form's elements.
+           success: function(data)
+           {
+               $("#response").html(data); // show response from the php script.
+           }
+         });
+
+
+});
+  </script>
+  
+  </body>
+  
 </html>
