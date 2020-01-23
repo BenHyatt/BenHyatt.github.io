@@ -1,12 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <link rel="import" href="nav.html">
-    <script>
-      var link = document.querySelector('link[rel="import"]');
-        var nav = link.import.querySelector('nav');
-        document.body.appendChild(nav.cloneNode(true));
-    </script>
+
     <!-- Required meta tags -->
       <style>
           body {
@@ -27,10 +22,32 @@
       
       
         <!-- Navigation LOADED WITH JS-->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top" id="nav-placeholder">
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     
+      <a class="navbar-brand" href="#">The GOLD Party of UAHS</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">History</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">What we do</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Meet the ELT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
-
   <!-- Page Content -->
   <div class="container-sm bg-light">
     <div class="p-3 mb-2 bg-info text-white"><p><em>Info</em>: this site is still under construction. Please direct queries to elt@uagoldparty.org</p></div>
