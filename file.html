@@ -12,9 +12,9 @@
 <script>
 if(window.location.hash) {
       var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
-      alert (hash);
-      // hash found
       
+      // hash found
+     window.alert("<iframe src='https://www.jamesunderwood.net/goldapi/image.php?id=" + hash + "'></iframe>");
       
       document.getElementById("dadiv").innerHTML = "<iframe src='https://www.jamesunderwood.net/goldapi/image.php?id=" + hash + "'></iframe>";
   } else {
