@@ -1,0 +1,98 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Milton Project</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/carousel/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="bs.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Milton's Baddies</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="adam">Adam</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="eve">Eve</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="satan">Satan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="god">God</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="jesus">Jesus</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sin">Sin</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main role="main">
+      <!--CODE GOES HERE -->
+      
+     <div class="container">
+        <div class="jumbotron">
+          <div class="col-lg-12 text-center">
+            <h1 class="display-4 font-weight-bold text-dark">Eve</h1>
+            <div class="row">
+              <div class="col">
+               <image class="w-100" src="https://4.bp.blogspot.com/--RZFNVUh3xc/V1b0G1AhKFI/AAAAAAAAEXk/sn1asWOc1NwYPIktA7U4dzTwZPzuNOKqgCLcB/s1600/Alexandre%2BCabanel%2B%255BFrench%2Bpainter%2B1823-1889%255D%2B-%2BAdam%252C%2Bstudy%2Bfor%2BParadise%2BLost%252C%2B1863-67.jpg">
+              </div>
+              <div class="col"> 
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sollicitudin lacus quis nisi feugiat imperdiet. Integer molestie eu lectus dignissim dapibus. Proin sagittis sapien sit amet dui dignissim, ac lacinia risus interdum. Ut lacinia non nisl vitae tincidunt. Maecenas in ex finibus, sollicitudin massa id, aliquet nisl. Maecenas ut dictum mauris. Donec imperdiet rutrum leo nec vulputate. Nulla diam nisi, venenatis imperdiet nisi vehicula, dapibus finibus lorem. Vestibulum vel orci nibh. Sed convallis felis eget lorem venenatis, nec consequat risus imperdiet. Integer ac tellus vehicula, bibendum dui sit amet, pharetra justo. Maecenas vitae blandit lorem.
+                
+Maecenas vitae porttitor neque. Vivamus laoreet eu urna quis posuere. In pharetra turpis id mauris aliquam, vitae sagittis risus pellentesque. Maecenas cursus pellentesque nisl sit amet vestibulum. Suspendisse potenti. Nulla iaculis ante ac risus elementum, at varius ligula suscipit. Quisque molestie odio vitae elit ullamcorper consectetur. Duis accumsan, augue vel viverra cursus, nulla nisl aliquet nunc, non sagittis nisi elit at enim. Suspendisse vestibulum ullamcorper sem eget eleifend. Donec id dignissim nunc. Nullam eros magna, suscipit vitae tincidunt id, pellentesque ultrices neque. Curabitur hendrerit commodo arcu, consectetur suscipit dui tempus vel. Vivamus interdum volutpat volutpat. Sed cursus leo magna, a bibendum justo sodales non. Vivamus ut odio eget velit tincidunt imperdiet nec a lacus.
+              </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="featurette-divider">
+      </div>
+    
+    
+    
+    
+     <footer class="container">
+        <p class="float-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2021 Guigni, Inc.<!-- &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a> --></p>
+      </footer>
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+  </body>
+</html>
