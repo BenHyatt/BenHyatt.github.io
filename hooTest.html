@@ -28,7 +28,7 @@
             var debt = document.getElementById("debt").value;
 
             // Construct the URL with query parameters
-            var url = `https://benu423.pythonanywhere.com/predict?income=${income}&savings=${savings}&debt=${debt}`;
+            var url = "benu423.pythonanywhere.com/predict?income=${income}&savings=${savings}&debt=${debt}";
 
             // Send a GET request to the Flask app endpoint
             fetch(url)
