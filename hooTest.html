@@ -91,7 +91,7 @@
 
             // Construct the URL with the parameters
             var url = "https://benu423.pythonanywhere.com/predict?income=" + income + "&savings=" + savings + "&debt=" + debt;
-            // url += "&CAT_CREDIT_CARD=" + creditCard + "&CAT_MORTGAGE=" + mortgage + "&CAT_SAVINGS_ACCOUNT=" + savingsAccount + "&CAT_DEPENDENTS=" + dependents;
+            url += "&credit_card=" + creditCard + "&mortage=" + mortgage + "&savings_account=" + savingsAccount + "&dependents=" + dependents;
 
             // Send GET request to fetch the prediction result
             fetch(url)
