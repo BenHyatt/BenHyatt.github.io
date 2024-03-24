@@ -35,13 +35,23 @@
             var url = "https://benu423.pythonanywhere.com/predict?income=" + income + "&savings=" + savings + "&debt=" + debt;
 
             // Send GET request to the other website
-            fetch(url)
-            .then(response => response.text())
-            .then(data => {
-                // Display result on the webpage
-                document.getElementById("predictionResult").innerHTML = "<strong>Prediction:</strong> " + data;
+            fetch(url, {
+                mode: 'no-cors'
             })
-            .catch(error => console.error('Error:', error));
+            .then(response => {
+                if (response.ok) {
+                    // If response is successful, display a message indicating the request was sent
+                    document.getElementById("predictionResult").innerHTML = "Request sent successfully. Please check the response.";
+                } else {
+                    // If response is not successful, display an error message
+                    document.getElementById("predictionResult").innerHTML = "Error: Unable to send request.";
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                // Display error message if there is an error with the fetch request
+                document.getElementById("predictionResult").innerHTML = "Error: Unable to send request.";
+            });
         });
     </script>
 </body>
