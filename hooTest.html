@@ -1,0 +1,44 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POST Request Example</title>
+</head>
+<body>
+    <h1>POST Request Example</h1>
+    
+    <button onclick="sendPostRequest()">Send POST Request</button>
+
+    <script>
+        function sendPostRequest() {
+            // Define the URL of your Flask app endpoint
+            var flaskAppUrl = "https://benu423.pythonanywhere.com/predict";
+
+            // Define the data you want to send with the POST request
+            var data = {
+                income: "1000",
+                savings: "100",
+                debt: "50",
+            };
+
+            // Send a POST request to your Flask app using fetch API
+            fetch(flaskAppUrl, {
+                method: "POST",
+                body: JSON.stringify(data),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Handle the response from your Flask app
+                console.log("Response from Flask app:", data);
+                // You can update the HTML content or perform other actions based on the response
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+        }
+    </script>
+
+
+</body></html>
