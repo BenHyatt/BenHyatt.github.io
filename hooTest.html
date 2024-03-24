@@ -3,45 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulate POST Form Submission</title>
+    <title>POST Request Example with JSON</title>
 </head>
 <body>
-    <h1>Simulate POST Form Submission</h1>
+    <h1>POST Request Example with JSON</h1>
     
-    <button onclick="submitForm()">Submit Form</button>
+    <button onclick="sendPostRequest()">Send POST Request</button>
 
     <script>
-        function submitForm() {
+        function sendPostRequest() {
             // Define the URL of your Flask app endpoint
             var flaskAppUrl = "http://your-pythonanywhere-flask-app.com/your-endpoint";
 
-            // Create a form element
-            var form = document.createElement("form");
-            form.method = "POST";
-            form.action = flaskAppUrl;
+            // Define the data you want to send with the POST request
+            var data = {
+                income: 500,
+                savings: 500,
+                debt: 500
+            };
 
-            // Create input fields for income, savings, and debt
-            var incomeInput = document.createElement("input");
-            incomeInput.type = "hidden";
-            incomeInput.name = "income";
-            incomeInput.value = "500";
-            form.appendChild(incomeInput);
-
-            var savingsInput = document.createElement("input");
-            savingsInput.type = "hidden";
-            savingsInput.name = "savings";
-            savingsInput.value = "500";
-            form.appendChild(savingsInput);
-
-            var debtInput = document.createElement("input");
-            debtInput.type = "hidden";
-            debtInput.name = "debt";
-            debtInput.value = "500";
-            form.appendChild(debtInput);
-
-            // Append the form to the document body and submit it
-            document.body.appendChild(form);
-            form.submit();
+            // Send a POST request to your Flask app using fetch API
+            fetch(flaskAppUrl, {
+                method: "POST",
+                body: JSON.stringify(data),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Handle the response from your Flask app
+                console.log("Response from Flask app:", data);
+                // You can update the HTML content or perform other actions based on the response
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
         }
     </script>
 </body>
