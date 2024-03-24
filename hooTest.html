@@ -3,38 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POST Request Example with JSON</title>
+    <title>Prediction Form</title>
 </head>
 <body>
-    <h1>POST Request Example with JSON</h1>
+    <h1>Prediction Form</h1>
     
-    <button onclick="sendPostRequest()">Send POST Request</button>
+    <label for="income">Income:</label>
+    <input type="number" id="income" name="income" value="500"><br><br>
+
+    <label for="savings">Savings:</label>
+    <input type="number" id="savings" name="savings" value="500"><br><br>
+
+    <label for="debt">Debt:</label>
+    <input type="number" id="debt" name="debt" value="500"><br><br>
+
+    <button onclick="sendGetRequest()">Get Prediction</button><br><br>
+
+    <div id="predictionResult"></div>
 
     <script>
-        function sendPostRequest() {
-            // Define the URL of your Flask app endpoint
-            var flaskAppUrl = "https://benu423.pythonanywhere.com/predict";
+        function sendGetRequest() {
+            var income = document.getElementById("income").value;
+            var savings = document.getElementById("savings").value;
+            var debt = document.getElementById("debt").value;
 
-            // Define the data you want to send with the POST request
-            var data = {
-                income: 500,
-                savings: 500,
-                debt: 500
-            };
+            // Construct the URL with query parameters
+            var url = `http://your-pythonanywhere-flask-app.com/predict?income=${income}&savings=${savings}&debt=${debt}`;
 
-            // Send a POST request to your Flask app using fetch API
-            fetch(flaskAppUrl, {
-                method: "POST",
-                body: JSON.stringify(data),
-                headers: {
-                    "Content-Type": "application/json"
-                }
-            })
-            .then(response => response.json())
+            // Send a GET request to the Flask app endpoint
+            fetch(url)
+            .then(response => response.text())
             .then(data => {
-                // Handle the response from your Flask app
-                console.log("Response from Flask app:", data);
-                // You can update the HTML content or perform other actions based on the response
+                // Display the response on the webpage
+                document.getElementById("predictionResult").innerHTML = "Prediction: " + data;
             })
             .catch(error => {
                 console.error("Error:", error);
