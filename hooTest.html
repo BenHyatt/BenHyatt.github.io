@@ -97,12 +97,12 @@
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
-                return response.text();
+                return response.json();
             })
             .then(data => {
                 // Display the prediction result on the webpage
                 console.log("Prediction Result:", data);
-                document.getElementById("predictionResult").innerText = "Prediction Result: " + data;
+                document.getElementById("predictionResult").innerText = "Prediction Result: " + data.prediction;
                 // You can handle the result here, for example, display it on the webpage
             })
             .catch(error => {
