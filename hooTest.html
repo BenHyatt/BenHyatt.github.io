@@ -74,14 +74,14 @@
                 <label for="dependents">Dependents:</label>
                 <input type="checkbox" id="dependents" name="CAT_DEPENDENTS">
             </div>
-            <button type="submit" class="btn">Submit</button>
+            <button type="button" class="btn" onclick="fetchPrediction()">Submit</button>
         </form>
     </div>
 
     <div id="predictionResult"></div>
 
     <script>
-        document.getElementById("predictionForm").addEventListener("submit", function(event) {
+         function fetchPrediction() {
             event.preventDefault(); // Prevent form submission
 
             // Get input values
