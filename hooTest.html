@@ -3,44 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prediction Form</title>
+    <title>Number Prediction</title>
 </head>
 <body>
-    <h1>Prediction Form</h1>
-    
-    <label for="income">Income:</label>
-    <input type="number" id="income" name="income" value="500"><br><br>
+    <h2>Input Numbers</h2>
+    <form id="predictionForm">
+        <label for="income">Income:</label>
+        <input type="number" id="income" name="income" required><br><br>
 
-    <label for="savings">Savings:</label>
-    <input type="number" id="savings" name="savings" value="500"><br><br>
+        <label for="savings">Savings:</label>
+        <input type="number" id="savings" name="savings" required><br><br>
 
-    <label for="debt">Debt:</label>
-    <input type="number" id="debt" name="debt" value="500"><br><br>
+        <label for="debt">Debt:</label>
+        <input type="number" id="debt" name="debt" required><br><br>
 
-    <button onclick="sendGetRequest()">Get Prediction</button><br><br>
+        <button type="submit">Predict</button>
+    </form>
 
     <div id="predictionResult"></div>
 
     <script>
-        function sendGetRequest() {
+        document.getElementById("predictionForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get input values
             var income = document.getElementById("income").value;
             var savings = document.getElementById("savings").value;
             var debt = document.getElementById("debt").value;
 
-            // Construct the URL with query parameters
-            var url = "benu423.pythonanywhere.com/predict?income=${income}&savings=${savings}&debt=${debt}";
+            // Construct URL with input values
+            var url = "https://benu423.pythonanywhere.com/predict?income=" + income + "&savings=" + savings + "&debt=" + debt;
 
-            // Send a GET request to the Flask app endpoint
+            // Send GET request to the other website
             fetch(url)
             .then(response => response.text())
             .then(data => {
-                // Display the response on the webpage
-                document.getElementById("predictionResult").innerHTML = "Prediction: " + data;
+                // Display result on the webpage
+                document.getElementById("predictionResult").innerHTML = "<strong>Prediction:</strong> " + data;
             })
-            .catch(error => {
-                console.error("Error:", error);
-            });
-        }
+            .catch(error => console.error('Error:', error));
+        });
     </script>
 </body>
 </html>
