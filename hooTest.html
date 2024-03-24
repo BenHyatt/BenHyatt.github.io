@@ -104,7 +104,7 @@
             .then(data => {
                 // Display the prediction result on the webpage
                 console.log("Prediction Result:", data);
-                document.getElementById("predictionResult").innerText = "Prediction Result: " + data.prediction;
+                document.getElementById("predictionResult").innerText = "Prediction Result: " + Math.round(data.prediction);
                 // You can handle the result here, for example, display it on the webpage
             })
             .catch(error => {
