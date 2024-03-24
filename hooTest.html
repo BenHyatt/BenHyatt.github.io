@@ -84,10 +84,10 @@
             var income = document.getElementById("income").value;
             var savings = document.getElementById("savings").value;
             var debt = document.getElementById("debt").value;
-            var creditCard = document.getElementById("creditCard").checked;
-            var mortgage = document.getElementById("mortgage").checked;
-            var savingsAccount = document.getElementById("savingsAccount").checked;
-            var dependents = document.getElementById("dependents").checked;
+            var creditCard = +document.getElementById("creditCard").checked;
+            var mortgage = +document.getElementById("mortgage").checked;
+            var savingsAccount = +document.getElementById("savingsAccount").checked;
+            var dependents = +document.getElementById("dependents").checked;
 
             // Construct the URL with the parameters
             var url = "https://benu423.pythonanywhere.com/predict?income=" + income + "&savings=" + savings + "&debt=" + debt;
